@@ -1,0 +1,19 @@
+# Ensures clean canonical URLs (e.g. /ar, /ar/privacy-policy) resolve to
+# their actual .html files. This matters because every page's
+# <link rel="canonical"> tag points to the clean (no .html) version —
+# if your server doesn't already do this, Google will see a mismatch
+# between the URL it crawled and the canonical URL declared in the page.
+# Safe to delete this file if your host already handles clean URLs
+# automatically (e.g. Netlify, Vercel, GitHub Pages with the included
+# _redirects file, or a host with MultiViews already enabled).
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Block the dashboard login path from being served by this static site
+# (it lives in a separate codebase/app — this is just a safety fallback
+# in case a stray /login folder ever ends up inside this deployment).

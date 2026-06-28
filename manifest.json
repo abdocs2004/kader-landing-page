@@ -1,0 +1,32 @@
+{
+  "name": "Kader Academy — كادر",
+  "short_name": "Kader",
+  "description": "أكاديمية كادر — حصص برمجة مباشرة فردية للأطفال والمراهقين من 6 إلى 18 سنة.",
+  "start_url": "/ar/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6b35",
+  "icons": [
+    {
+      "src": "/assets/img/icon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

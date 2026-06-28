@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, follow" />
+  <!--
+    This root file only redirects to the language-specific canonical page.
+    robots is set to noindex (not index, follow) so Google doesn't treat
+    this as a separate, competing page against /ar and /en — those are
+    the canonical pages declared in sitemap.xml and meant to rank.
+    The redirect target uses the clean canonical path (/ar or /en) rather
+    than the relative .html file, so the URL in the address bar matches
+    the canonical tag on the destination page exactly.
+  -->
+  <meta http-equiv="refresh" content="0; url=/ar" />
+  <link rel="canonical" href="https://kadertech.live/ar" />
+  <title>Kader Academy — كادر</title>
+  <script>
+    var saved = localStorage.getItem("kader_locale");
+    var preferred = saved === "en" ? "en" : (navigator.language || "").toLowerCase().startsWith("en") ? "en" : "ar";
+    window.location.replace("/" + preferred);
+  </script>
+</head>
+<body>
+  <p>Redirecting… / جاري التحويل… <a href="/ar">العربية</a> · <a href="/en">English</a></p>
+</body>
+</html>

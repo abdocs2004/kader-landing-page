@@ -1,0 +1,12 @@
+# Ensures clean canonical URLs resolve to their index.html files.
+# This matters because <link rel="canonical"> tags across the site point to
+# clean paths (e.g. /ar, /ar/privacy-policy) without the .html extension.
+# If your host doesn't already do this automatically, this file (Netlify)
+# and the included .htaccess (Apache) cover the two most common setups.
+
+/ar               /ar/index.html              200
+/en               /en/index.html              200
+/ar/privacy-policy   /ar/privacy-policy.html   200
+/ar/terms            /ar/terms.html            200
+/en/privacy-policy   /en/privacy-policy.html   200
+/en/terms            /en/terms.html            200
